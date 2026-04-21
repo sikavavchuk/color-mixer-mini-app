@@ -41,3 +41,9 @@ struct ColorMixerApplication: View {
         }
     }
 }
+
+struct ColorSlider: View {
+    var body: some View {
+        
+    }
+}
