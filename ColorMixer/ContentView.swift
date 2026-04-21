@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
-        
+        ColorMixerApplication()
     }
 }
 
@@ -40,7 +39,9 @@ struct ColorMixerApplication: View {
                 ColorSlider(value: $green, text: "Green", color: .green)
                 ColorSlider(value: $blue, text: "Blue", color: .blue)
             }
+            .padding()
         }
+        .padding()
     }
 }
 
@@ -50,6 +51,12 @@ struct ColorSlider: View {
     let color: Color
     
     var body: some View {
-        Slider(value: $value)
+        HStack {
+            Text(text)
+                .frame(width: 50, alignment: .leading)
+                .foregroundStyle(color)
+            Slider(value: $value)
+            Text("\(value, specifier: "%.2f")")
+        }
     }
 }
