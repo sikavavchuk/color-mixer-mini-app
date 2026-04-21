@@ -36,14 +36,20 @@ struct ColorMixerApplication: View {
                     .shadow(radius: 5)
             }
             VStack(spacing: 20) {
-                //sliders
+                ColorSlider(value: $red, text: "Red", color: .red)
+                ColorSlider(value: $green, text: "Green", color: .green)
+                ColorSlider(value: $blue, text: "Blue", color: .blue)
             }
         }
     }
 }
 
 struct ColorSlider: View {
+    @Binding var value: Double
+    let text: String
+    let color: Color
+    
     var body: some View {
-        
+        Slider(value: $value)
     }
 }
