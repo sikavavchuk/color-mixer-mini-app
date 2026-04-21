@@ -1,2 +1,4 @@
 # color-mixer-mini-app
-simple color mixer app made on SwiftUI
+Simple color-mixer app made with using SwiftUI
+
+## Preview
